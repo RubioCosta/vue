@@ -4,6 +4,11 @@
       <Loading :key="index" />
     </div>
   </section>
+  <section id="infinity-scroll-main" v-on:scroll="addInfinityScroll">
+    <div v-for="(item, index) in list">
+      <Loading :key="index" />
+    </div>
+  </section>
 </template>
 
 <script>
