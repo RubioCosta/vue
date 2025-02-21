@@ -11,7 +11,7 @@
   import { onMounted, ref } from 'vue' 
   import Post from './Post.vue';
 
-  const PACK_SIZE = 20
+  const PACK_SIZE = 10
   const postsCurrent = ref([])
   const postsStack = ref([])
 
