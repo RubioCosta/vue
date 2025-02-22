@@ -1,5 +1,9 @@
 <template>
-  <InfinityScroll />
+  <section>
+    <InfinityScroll />
+    <br />
+    <InfinityScroll />
+  </section>
 </template>
 
 <script >

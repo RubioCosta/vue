@@ -22,9 +22,9 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50px;
+    height: 40px;
     margin: 4px;
-    animation: animation-loading 0.8s ease-in-out infinite;
+    animation: animation-loading .5s ease-in-out infinite;
   }
 
   @keyframes animation-loading {
