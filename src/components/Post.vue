@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-  const { pathImage } = defineProps(['pathImage'])
+  const { pathImage, id } = defineProps(['pathImage, id'])
 </script>
 
 <style>
