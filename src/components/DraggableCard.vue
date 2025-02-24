@@ -24,36 +24,39 @@
   const draggableCard = ref(null);
 
   function handlerDragStart(e) {
-    console.log("Iniciando o processo de Draggable.")
-    draggableCard.value.style.opacity = .5;
+    // console.log("Iniciando o processo de Draggable.")
+    e.target.style.opacity = .1;
 
     e.dataTransfer.effectAllowed = 'move';
     e.dataTransfer.setData('text/html', draggableCard.value.innerHTML)
   }
   
   function handlerDragEnd(e) {
-    console.log("Finalizando o processo de Draggable.")
+    // console.log("Finalizando o processo de Draggable.")
     draggableCard.value.style.opacity = 1;
   }
   
   function handlerDragEnter(e) {
-    console.log("Dentro do elemento de Dropped.")
+    // console.log("Dentro do elemento de Dropped.")
   }
   
   function handleDragLeave(e) {
     draggableCard.value.style.backgroundColor = '#FFFFFF'
-    console.log("Saindo do elemento de Dropped.")
+    // console.log("Saindo do elemento de Dropped.")
   }
 
   function handlerDragOver(e) {
+    e.preventDefault();
+
     draggableCard.value.style.backgroundColor = '#000000'
-    console.log("Quando o elemento estiver sobre o elemento de Dropped.")
+    // console.log("Quando o elemento estiver sobre o elemento de Dropped.")
   }
 
   function handlerDrop(e) {
-    console.log("Aqui")
-    e.stopPropagation(); // Retirar o o comportamento padrão do navegador para quedas.
+    e.preventDefault(); // Retirar o o comportamento padrão do navegador para quedas.
 
+    console.log("Aqui 1: ", draggableCard.value)
+    console.log("Aqui 2: ", e.target)
     if (draggableCard.value !== e.target) {
       draggableCard.value = e.target;
       e.target = e.dataTransfer.getDate('text/html')

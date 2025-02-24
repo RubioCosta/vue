@@ -22,7 +22,7 @@
   import InfinityScroll from './components/InfinityScroll.vue';
   import DragAndDrop from './components/DragAndDrop.vue';
 
-  const typeSelected = ref('InfinityScroll');
+  const typeSelected = ref('DragAndDrop');
 
   function handlerShowComponent(type) {
     typeSelected.value = type
