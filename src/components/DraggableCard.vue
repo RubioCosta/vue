@@ -4,10 +4,6 @@
     draggable="true"
     @dragstart="handlerDragStart"
     @dragend="handlerDragEnd"
-    @dragenter="handlerDragEnter"
-    @dragleave="handleDragLeave"
-    @dragover="handlerDragOver"
-    @drop="handlerDrop"
   >
     {{ titleCard }}
   </div>
@@ -20,30 +16,13 @@
   const { 
     titleCard,
     handlerDragStart,
-    handlerDrop
+    handlerDragEnd
   } = defineProps([
     'titleCard',
     'handlerDragStart',
-    'handlerDrop'
+    'handlerDragEnd'
   ]);
-  
-  function handlerDragEnd(e) {
-    e.target.style.opacity = 1;
-  }
-  
-  function handlerDragEnter(e) {
-    
-  }
-  
-  function handleDragLeave(e) {
-    e.target.style.backgroundColor = '#FFFFFF'
-  }
 
-  function handlerDragOver(e) {
-    e.preventDefault();
-
-    e.target.style.backgroundColor = '#000000'
-  }
 </script>
 
 <style scoped>
