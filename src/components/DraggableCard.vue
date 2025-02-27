@@ -1,6 +1,7 @@
 <template>
   <div 
-    id="draggable-card-main" 
+    :id="id"
+    class="draggable-card-main"
     draggable="true"
     @dragstart="handlerDragStart"
     @dragend="handlerDragEnd"
@@ -14,10 +15,12 @@
   // https://developer.mozilla.org/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API
 
   const { 
+    id,
     titleCard,
     handlerDragStart,
     handlerDragEnd
   } = defineProps([
+    'id',
     'titleCard',
     'handlerDragStart',
     'handlerDragEnd'
@@ -26,7 +29,7 @@
 </script>
 
 <style scoped>
-  #draggable-card-main {
+  .draggable-card-main {
     cursor: grab;
     max-width: 100%;
     height: 30px;
