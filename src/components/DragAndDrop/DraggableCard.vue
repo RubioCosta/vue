@@ -3,6 +3,7 @@
     :id="id"
     class="draggable-card-main"
     draggable="true"
+    :data-custom-id="'box-card'"
     @dragstart="handlerDragStart"
     @dragend="handlerDragEnd"
   >
@@ -30,6 +31,7 @@
 
 <style scoped>
   .draggable-card-main {
+    border: 2px solid transparent;
     cursor: grab;
     max-width: 100%;
     height: 30px;

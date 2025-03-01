@@ -19,8 +19,8 @@
   import { ref } from 'vue'; 
 
   // Components
-  import InfinityScroll from './components/InfinityScroll.vue';
-  import DragAndDrop from './components/DragAndDrop.vue';
+  import InfinityScroll from './components/InfinityScroll/InfinityScroll.vue';
+  import DragAndDrop from './components/DragAndDrop/DragAndDrop.vue';
 
   const typeSelected = ref('DragAndDrop');
 
